@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Previne scroll horizontal e remove bordas brancas */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+#page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Styles */
+@layer base {
+  /* html {
+  } */
+  
+  /* Proteção para elementos de plugins - evita que Tailwind reset afete plugins */
+  .wp-admin,
+  .wp-admin *,
+  [class*="wp-"],
+  [id*="wp-"],
+  [class*="plugin-"],
+  [id*="plugin-"],
+  [class*="elementor"],
+  [id*="elementor"],
+  [class*="woocommerce"],
+  [id*="woocommerce"],
+  [class*="contact-form"],
+  [id*="contact-form"],
+  [class*="cf7"],
+  [id*="cf7"],
+  [class*="ninja"],
+  [id*="ninja"],
+  [class*="gravity"],
+  [id*="gravity"],
+  [class*="wpcf7"],
+  [id*="wpcf7"] {
+    all: revert;
+  }
+  
+  /* Seleção de texto personalizada */
+  /* ::selection {
+    background-color: #1e1c1c;
+    color: #4b58ff;
+  } */
+  
+  /* ::-moz-selection {
+    background-color: #1e1c1c;
+    color: #4b58ff;
+  } */
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+  
+  /* Logo customizada */
+  .custom-logo {
+    @apply h-20 w-auto max-w-[200px] object-contain transition-all duration-300;
+  }
+  
+  .custom-logo-link {
+    @apply inline-block;
+  }
+}
+
+/* WordPress Core Styles */
+.alignleft {
+  @apply float-left mr-4 mb-4;
+}
+
+.alignright {
+  @apply float-right ml-4 mb-4;
+}
+
+.aligncenter {
+  @apply block mx-auto mb-4;
+}
+
+.wp-caption {
+  @apply max-w-full;
+}
+
+.wp-caption-text {
+  @apply text-sm text-gray-600 mt-2;
+}
+
+.screen-reader-text {
+  @apply sr-only;
+}
+
+/* Gutenberg Block Styles */
+.wp-block-image {
+  @apply mb-6;
+}
+
+.wp-block-quote {
+  @apply border-l-4 border-blue-600 pl-4 italic my-6;
+}
+
+.wp-block-button__link {
+  @apply btn btn-primary;
+}
+
+/* WooCommerce Styles */
+.woocommerce {
+  .woocommerce-message,
+  .woocommerce-info,
+  .woocommerce-error {
+    @apply p-4 mb-4 rounded-lg;
+  }
+  
+  .woocommerce-message {
+    @apply bg-green-100 text-green-800 border border-green-200;
+  }
+  
+  .woocommerce-info {
+    @apply bg-blue-100 text-blue-800 border border-blue-200;
+  }
+  
+  .woocommerce-error {
+    @apply bg-red-100 text-red-800 border border-red-200;
+  }
+  
+  .button {
+    @apply btn btn-primary;
+  }
+  
+  .products {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  .product {
+    @apply card hover:shadow-xl transition;
+  }
+}
+
+/* Proteção adicional para plugins - garante que elementos de plugins não sejam afetados */
+.wp-block-group,
+.wp-block-columns,
+.wp-block-column,
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-embed,
+.wp-block-video,
+.wp-block-audio,
+.wp-block-file,
+.wp-block-button,
+.wp-block-quote,
+.wp-block-pullquote,
+.wp-block-table,
+.wp-block-preformatted,
+.wp-block-code,
+.wp-block-verse,
+.wp-block-separator,
+.wp-block-spacer,
+.wp-block-text-columns,
+.wp-block-media-text,
+.wp-block-cover,
+.wp-block-group__inner-container {
+  /* Garante que blocos do WordPress não sejam afetados pelo reset do Tailwind */
+  box-sizing: border-box;
+}
+
+/* Proteção para formulários de plugins */
+form[class*="wpcf7"],
+form[class*="contact-form"],
+form[class*="ninja"],
+form[class*="gravity"],
+form[class*="elementor"],
+form[class*="woocommerce"] {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Garante que modais e overlays de plugins funcionem */
+[class*="modal"],
+[class*="overlay"],
+[class*="popup"],
+[class*="lightbox"],
+[id*="modal"],
+[id*="overlay"],
+[id*="popup"],
+[id*="lightbox"] {
+  position: fixed !important;
+  z-index: 9999 !important;
+}

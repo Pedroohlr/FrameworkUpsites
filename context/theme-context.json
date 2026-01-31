@@ -1,0 +1,242 @@
+{
+  "projeto": {
+    "nome": "FrameworkUpsites",
+    "tipo": "WordPress Theme",
+    "versao": "1.0.0",
+    "php_minimo": "7.4",
+    "wordpress_minimo": "6.0",
+    "descricao": "Tema WordPress moderno e flexível desenvolvido para ser base reutilizável em qualquer projeto"
+  },
+  
+  "estrutura_diretorios": {
+    "/": "Arquivos principais do tema (style.css, functions.php, header.php, footer.php, etc)",
+    "/pages/": "Templates de páginas personalizados (home.php, contato.php, blog.php)",
+    "/parts/": "Componentes reutilizáveis (cta.php, page-hero.php)",
+    "/inc/": "Arquivos de funcionalidades (helpers.php, theme-options.php, security.php, performance.php)",
+    "/assets/": "Recursos estáticos (CSS compilado, JavaScript, imagens)",
+    "/assets/css/": "CSS compilado do Tailwind",
+    "/assets/js/": "JavaScript do tema",
+    "/assets/images/": "Imagens do tema",
+    "/src/": "Arquivos fonte (input.css para Tailwind)",
+    "/context/": "Contexto e documentação para IA"
+  },
+  
+  "arquivos_principais": {
+    "style.css": "Informações do tema (obrigatório WordPress)",
+    "functions.php": "Configurações e funcionalidades principais do tema",
+    "header.php": "Cabeçalho do site (menu, logo)",
+    "footer.php": "Rodapé do site (menus, contatos, copyright)",
+    "index.php": "Template padrão do WordPress",
+    "page.php": "Template para páginas",
+    "single.php": "Template para posts individuais",
+    "archive.php": "Template para listagem de posts (blog)",
+    "404.php": "Página de erro 404",
+    "search.php": "Resultados de busca",
+    "comments.php": "Sistema de comentários",
+    "woocommerce.php": "Template para páginas do WooCommerce"
+  },
+  
+  "sistema_templates": {
+    "como_funciona": "Templates personalizados são registrados automaticamente da pasta /pages/",
+    "criacao": "Criar arquivo PHP em /pages/ com Template Name no cabeçalho",
+    "exemplo_cabecalho": "<?php\n/**\n * Template Name: Nome do Template\n * \n * Descrição do template\n * \n * @package FrameworkUpsites\n */",
+    "uso": "Selecionar o template na edição da página no WordPress admin",
+    "estrutura_basica": "get_header() -> conteúdo -> get_footer()"
+  },
+  
+  "componentes_reutilizaveis": {
+    "localizacao": "/parts/",
+    "como_incluir": "include get_template_directory() . '/parts/nome-componente.php';",
+    "passar_variaveis": "Definir variáveis antes do include",
+    "componentes_disponiveis": {
+      "cta.php": "Seção call-to-action reutilizável (variáveis: $cta_title, $cta_description, $cta_button_text, $cta_button_link)",
+      "page-hero.php": "Hero genérico para páginas (variáveis: $subtitle, $title, $description)"
+    }
+  },
+  
+  "sistema_menus": {
+    "locais_registrados": {
+      "primary": "Menu principal no header",
+      "footer": "Menu no rodapé"
+    },
+    "walker_customizado": "FrameworkUpsites_Walker_Nav_Menu (suporte a submenu com Tailwind)",
+    "configuracao_admin": "Aparência > Menus no WordPress admin"
+  },
+  
+  "opcoes_tema": {
+    "localizacao": "Aparência > Opções FrameworkUpsites no admin",
+    "funcao_get": "frameworkupsites_get_option('nome_opcao', 'valor_padrao')",
+    "opcoes_disponiveis": {
+      "logo": "Logo do site (também via Customizer)",
+      "contato": {
+        "whatsapp": "frameworkupsites_whatsapp",
+        "email": "frameworkupsites_email",
+        "telefone": "frameworkupsites_phone",
+        "endereco": "frameworkupsites_address"
+      },
+      "redes_sociais": {
+        "facebook": "frameworkupsites_facebook",
+        "instagram": "frameworkupsites_instagram",
+        "linkedin": "frameworkupsites_linkedin",
+        "youtube": "frameworkupsites_youtube"
+      },
+      "footer": {
+        "descricao": "frameworkupsites_footer_description",
+        "copyright": "frameworkupsites_copyright_text"
+      },
+      "cta_contato": {
+        "titulo": "frameworkupsites_contact_cta_title",
+        "descricao": "frameworkupsites_contact_cta_description",
+        "botao_texto": "frameworkupsites_contact_cta_button",
+        "botao_link": "frameworkupsites_contact_cta_link"
+      }
+    }
+  },
+  
+  "funcoes_helper": {
+    "localizacao": "/inc/helpers.php",
+    "funcoes_disponiveis": {
+      "frameworkupsites_get_option": "Obter opção do tema com valor padrão",
+      "frameworkupsites_get_whatsapp": "Obter número WhatsApp",
+      "frameworkupsites_whatsapp_link": "Gerar link do WhatsApp",
+      "frameworkupsites_format_phone": "Formatar número de telefone",
+      "frameworkupsites_get_social_links": "Obter array de links sociais"
+    }
+  },
+  
+  "wordpress_features": {
+    "suporte_habilitado": [
+      "title-tag",
+      "post-thumbnails",
+      "custom-logo",
+      "html5",
+      "customize-selective-refresh-widgets",
+      "woocommerce"
+    ],
+    "tamanhos_imagem": {
+      "thumbnail": "150x150",
+      "medium": "300x300",
+      "large": "1024x1024"
+    }
+  },
+  
+  "javascript": {
+    "arquivo_principal": "/assets/js/main.js",
+    "dependencias": "jQuery",
+    "funcionalidades": {
+      "initMobileMenu": "Menu mobile responsivo com animação",
+      "initSmoothScroll": "Scroll suave para âncoras",
+      "initStickyHeader": "Header fixo ao rolar",
+      "initLazyLoad": "Lazy loading de imagens",
+      "initBackToTop": "Botão voltar ao topo",
+      "initRotatingIcon": "Ícone rotativo no scroll",
+      "initFixedBanner": "Banner fixo com botão de fechar"
+    },
+    "inicializacao": "DOMContentLoaded event"
+  },
+  
+  "otimizacoes_performance": {
+    "localizacao": "/inc/performance.php",
+    "recursos": [
+      "Remove emoji scripts",
+      "Remove embed scripts",
+      "Remove query strings de assets",
+      "Defer JavaScript loading",
+      "Preconnect para recursos externos",
+      "Limit post revisions",
+      "Clean dashboard widgets"
+    ]
+  },
+  
+  "seguranca": {
+    "localizacao": "/inc/security.php",
+    "medidas": [
+      "Remove WordPress version",
+      "Disable file editing",
+      "Add security headers",
+      "Limit login attempts",
+      "Sanitize search inputs",
+      "Add noopener noreferrer to external links"
+    ]
+  },
+  
+  "fluxo_criacao_pagina": {
+    "passo_1": "Criar arquivo PHP em /pages/ com Template Name",
+    "passo_2": "Adicionar get_header() no início",
+    "passo_3": "Estruturar conteúdo em <main> com seções <section>",
+    "passo_4": "Usar classes Tailwind para estilização",
+    "passo_5": "Incluir componentes de /parts/ quando necessário",
+    "passo_6": "Adicionar get_footer() no final",
+    "passo_7": "Criar página no WordPress admin e selecionar o template"
+  },
+  
+  "padroes_secao": {
+    "estrutura_base": "<section class='py-12 md:py-16 lg:py-24 bg-white'>\n    <div class='container mx-auto px-4'>\n        <!-- conteúdo -->\n    </div>\n</section>",
+    "alternancia_fundo": "Alternar entre bg-white e bg-gray-50 ou bg-framework-gray",
+    "espacamento_interno": "py-12 md:py-16 lg:py-24",
+    "titulo_secao": "text-3xl md:text-4xl font-bold text-framework-black mb-6",
+    "subtitulo_secao": "text-framework-primary text-sm md:text-base font-medium uppercase tracking-wider mb-4"
+  },
+  
+  "boas_praticas": {
+    "sempre_fazer": [
+      "Usar get_header() e get_footer()",
+      "Escapar outputs (esc_html, esc_url, esc_attr)",
+      "Usar prefixo frameworkupsites_ em funções",
+      "Verificar ABSPATH em arquivos PHP",
+      "Usar classes Tailwind ao invés de CSS inline",
+      "Mobile-first responsive design",
+      "Adicionar alt em imagens",
+      "Validar e sanitizar inputs de formulários"
+    ],
+    "evitar": [
+      "Hard-coding de URLs e paths",
+      "CSS inline (usar Tailwind classes)",
+      "JavaScript inline (usar arquivo .js)",
+      "Esquecer responsive design",
+      "Pular verificações de segurança",
+      "Usar deprecated WordPress functions",
+      "Criar arquivos fora da estrutura do tema"
+    ]
+  },
+  
+  "desenvolvimento": {
+    "setup_inicial": [
+      "npm install (instalar dependências)",
+      "npm run dev (watch mode para desenvolvimento)",
+      "npm run build (compilar para produção)"
+    ],
+    "workflow": "Editar src/input.css -> Tailwind compila -> assets/css/tailwind.css",
+    "browser_sync": "Configurado para live reload (bs-config.js)",
+    "versionamento": "Atualizar FRAMEWORKTEMA_VERSION em functions.php"
+  },
+  
+  "integracao_figma": {
+    "workflow": "Figma Design -> MCP -> Cursor AI -> Implementação seguindo este contexto",
+    "cores": "Mapear cores do Figma para variáveis Tailwind (framework-black, framework-white, framework-primary)",
+    "espacamentos": "Converter pixels do Figma para classes Tailwind (p-4, gap-6, etc)",
+    "tipografia": "Usar escala Tailwind (text-sm, text-base, text-xl, etc)",
+    "componentes": "Criar componentes reutilizáveis em /parts/ quando componente aparece 2+ vezes"
+  },
+  
+  "checklist_nova_secao": [
+    "Usar estrutura semântica HTML5 (<section>, <article>, etc)",
+    "Container: container mx-auto px-4",
+    "Padding vertical: py-12 md:py-16 lg:py-24",
+    "Grid/Flex para layout",
+    "Cores do tema (framework-black, framework-white, framework-primary)",
+    "Tipografia consistente (Readex Pro)",
+    "Espaçamento consistente (mb-4, mb-6, mb-8)",
+    "Animações sutis (transition-all duration-300)",
+    "Responsivo mobile-first",
+    "Acessibilidade (alt, aria-labels, contraste)",
+    "Imagens com lazy loading",
+    "Escapar outputs PHP"
+  ],
+  
+  "comandos_uteis": {
+    "compilar_css": "npm run build",
+    "desenvolvimento": "npm run dev",
+    "atualizar_browserslist": "npx update-browserslist-db@latest"
+  }
+}

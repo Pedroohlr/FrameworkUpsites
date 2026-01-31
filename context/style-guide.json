@@ -1,0 +1,185 @@
+{
+  "nome_projeto": "FrameworkUpsites",
+  "versao": "1.0.0",
+  "descricao": "Guia de estilos e padrões de código para desenvolvimento consistente",
+  
+  "framework_css": {
+    "nome": "Tailwind CSS",
+    "versao": "3.4.0",
+    "arquivo_config": "tailwind.config.js",
+    "arquivo_entrada": "src/input.css",
+    "arquivo_saida": "assets/css/tailwind.css",
+    "comando_build": "npm run build",
+    "comando_watch": "npm run dev"
+  },
+  
+  "cores_padrao": {
+    "framework-black": "#1e1c1c",
+    "framework-white": "#f1eded",
+    "framework-primary": "#4b58ff",
+    "primary": {
+      "50": "#eff6ff",
+      "100": "#dbeafe",
+      "200": "#bfdbfe",
+      "300": "#93c5fd",
+      "400": "#60a5fa",
+      "500": "#3b82f6",
+      "600": "#2563eb",
+      "700": "#1d4ed8",
+      "800": "#1e40af",
+      "900": "#1e3a8a"
+    }
+  },
+  
+  "tipografia": {
+    "fonte_principal": "Readex Pro",
+    "fonte_fallback": "system-ui, -apple-system, sans-serif",
+    "tamanhos": {
+      "h1": "text-[20px] md:text-5xl lg:text-6xl",
+      "h2": "text-3xl md:text-4xl lg:text-5xl",
+      "h3": "text-2xl md:text-3xl",
+      "h4": "text-xl md:text-2xl",
+      "h5": "text-lg md:text-xl",
+      "body": "text-base",
+      "small": "text-sm"
+    },
+    "pesos": {
+      "light": "font-light (300)",
+      "regular": "font-normal (400)",
+      "medium": "font-medium (500)",
+      "semibold": "font-semibold (600)",
+      "bold": "font-bold (700)"
+    }
+  },
+  
+  "espacamento": {
+    "container": "container mx-auto px-4",
+    "secao_vertical": "py-12 md:py-16 lg:py-24",
+    "espacamento_elementos": "mb-4, mb-6, mb-8, mb-12",
+    "gap_grid": "gap-4, gap-6, gap-8, gap-12"
+  },
+  
+  "componentes_comuns": {
+    "botao_primary": "inline-flex items-center gap-2 px-6 py-3 bg-framework-primary text-white rounded-lg font-medium hover:bg-framework-primary/90 transition-all duration-300",
+    "botao_secondary": "inline-flex items-center gap-2 px-6 py-3 border-2 border-framework-black text-framework-black rounded-lg font-medium hover:bg-framework-black hover:text-white transition-all duration-300",
+    "card": "bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300",
+    "input": "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-framework-primary focus:border-transparent",
+    "link_hover": "hover:text-framework-primary transition-colors duration-300"
+  },
+  
+  "grid_sistema": {
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1200px"
+    },
+    "colunas_comuns": {
+      "duas_colunas": "grid grid-cols-1 md:grid-cols-2",
+      "tres_colunas": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+      "quatro_colunas": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+      "sidebar": "grid grid-cols-1 lg:grid-cols-3",
+      "hero": "grid grid-cols-1 lg:grid-cols-2"
+    }
+  },
+  
+  "animacoes": {
+    "transicao_padrao": "transition-all duration-300",
+    "hover_scale": "hover:scale-105 transition-transform duration-300",
+    "fade_in": "opacity-0 animate-fadeIn",
+    "slide_up": "transform translate-y-4 opacity-0"
+  },
+  
+  "padroes_html": {
+    "estrutura_secao": {
+      "elemento": "section",
+      "classes_base": "py-12 md:py-16 lg:py-24",
+      "container": "container mx-auto px-4",
+      "exemplo": "<section class='py-16 bg-white'><div class='container mx-auto px-4'><!-- conteúdo --></div></section>"
+    },
+    "semantica": {
+      "header": "Usar <header> para cabeçalho principal",
+      "nav": "Usar <nav> para navegação",
+      "main": "Usar <main> para conteúdo principal (único por página)",
+      "article": "Usar <article> para conteúdo independente",
+      "section": "Usar <section> para seções temáticas",
+      "aside": "Usar <aside> para conteúdo relacionado/sidebar",
+      "footer": "Usar <footer> para rodapé"
+    },
+    "acessibilidade": {
+      "alt_imagens": "Sempre usar atributo alt em imagens",
+      "aria_labels": "Usar aria-label em elementos interativos sem texto visível",
+      "contraste": "Manter contraste mínimo 4.5:1 para texto normal",
+      "foco_teclado": "Garantir que elementos interativos tenham estado de foco visível"
+    }
+  },
+  
+  "padronizacao_codigo": {
+    "php": {
+      "indentacao": "4 espaços",
+      "abertura_funcao": "function nome_funcao() {",
+      "prefixo_funcoes": "frameworkupsites_",
+      "verificacao_abspath": "if (!defined('ABSPATH')) { exit; }",
+      "comentarios": "/** Docblock style para funções */",
+      "escape_output": "Usar esc_html(), esc_url(), esc_attr()"
+    },
+    "javascript": {
+      "indentacao": "4 espaços",
+      "declaracao_variaveis": "const/let (evitar var)",
+      "funcoes_arrow": "Preferir arrow functions quando apropriado",
+      "event_listeners": "Usar addEventListener ao invés de onclick",
+      "namespacing": "Encapsular código em funções ou objetos"
+    },
+    "css": {
+      "metodologia": "Utility-first com Tailwind CSS",
+      "custom_css": "Adicionar em src/input.css",
+      "componentes_complexos": "Usar @apply ou classes customizadas",
+      "responsividade": "Mobile-first (sem prefixo para mobile, md: para desktop)"
+    },
+    "nomenclatura": {
+      "arquivos": "kebab-case (meu-arquivo.php)",
+      "funcoes_php": "snake_case (minha_funcao)",
+      "classes_php": "PascalCase (MinhaClasse)",
+      "variaveis_js": "camelCase (minhaVariavel)",
+      "constantes": "UPPERCASE (MINHA_CONSTANTE)"
+    }
+  },
+  
+  "wordpress_hooks": {
+    "prefixo": "frameworkupsites_",
+    "prioridade_padrao": 10,
+    "parametros": "Especificar número de parâmetros aceitos",
+    "exemplo_action": "add_action('wp_enqueue_scripts', 'frameworkupsites_enqueue_scripts');",
+    "exemplo_filter": "add_filter('the_content', 'frameworkupsites_modify_content', 10, 1);"
+  },
+  
+  "otimizacao": {
+    "imagens": {
+      "lazy_loading": "Usar loading='lazy' em imagens",
+      "formatos": "WebP quando possível, JPEG/PNG como fallback",
+      "dimensoes": "Sempre especificar width e height",
+      "alt_text": "Sempre incluir alt descritivo"
+    },
+    "performance": {
+      "scripts": "Carregar no footer quando possível",
+      "css": "Minificar em produção",
+      "cache": "Usar versão nos assets (FRAMEWORKTEMA_VERSION)",
+      "preconnect": "Usar para recursos externos (fonts, CDNs)"
+    }
+  },
+  
+  "formularios": {
+    "classes_input": "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-framework-primary",
+    "classes_label": "block text-sm font-medium text-gray-700 mb-2",
+    "classes_button": "w-full px-6 py-3 bg-framework-primary text-white rounded-lg font-medium hover:bg-framework-primary/90",
+    "validacao": "HTML5 validation + backend validation",
+    "seguranca": "wp_nonce_field() e verificação no backend"
+  },
+  
+  "icons": {
+    "biblioteca": "Font Awesome 6.5.1",
+    "formato": "<i class='fa-solid fa-icon-name'></i>",
+    "tipos": "fa-solid, fa-regular, fa-brands",
+    "tamanhos": "text-sm, text-base, text-lg, text-xl, text-2xl"
+  }
+}
