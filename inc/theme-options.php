@@ -16,14 +16,14 @@ if (!defined('ABSPATH')) {
  * Adiciona página de opções do tema no admin
  */
 function frameworkupsites_add_theme_options_page() {
-    add_menu_page(
-        'Opções do Tema',           // Título da página
-        'Opções FrameworkUpsites',         // Título no menu
-        'manage_options',           // Capacidade necessária
-        'frameworkupsites-options',        // Slug da página
-        'frameworkupsites_render_options_page', // Função de callback
-        'dashicons-admin-customizer',    // Ícone
-        61                          // Posição no menu
+  add_menu_page(
+    'Opções do Tema',           // Título da página
+    'Opções FrameworkUpsites',         // Título no menu
+    'manage_options',           // Capacidade necessária
+    'frameworkupsites-options',        // Slug da página
+    'frameworkupsites_render_options_page', // Função de callback
+    'dashicons-admin-customizer',    // Ícone
+    61                          // Posição no menu
     );
 }
 add_action('admin_menu', 'frameworkupsites_add_theme_options_page');
