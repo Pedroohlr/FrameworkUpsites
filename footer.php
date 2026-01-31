@@ -69,27 +69,27 @@
                 <div>
                     <h3 class="text-white font-bold text-lg mb-4">Contato</h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <?php if (gridtheme_get_phone()) : ?>
+                        <?php if (frameworkupsites_get_phone()) : ?>
                         <li>
-                            <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9]/', '', gridtheme_get_phone())); ?>" class="hover:text-white transition-colors inline-flex items-center gap-2">
+                            <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9]/', '', frameworkupsites_get_phone())); ?>" class="hover:text-white transition-colors inline-flex items-center gap-2">
                                 <i class="fa-solid fa-phone text-framework-primary"></i>
-                                <?php echo esc_html(gridtheme_format_phone(gridtheme_get_phone())); ?>
+                                <?php echo esc_html(frameworkupsites_format_phone(frameworkupsites_get_phone())); ?>
                             </a>
                         </li>
                         <?php endif; ?>
                         
-                        <?php if (gridtheme_get_email()) : ?>
+                        <?php if (frameworkupsites_get_email()) : ?>
                         <li>
-                            <a href="mailto:<?php echo esc_attr(gridtheme_get_email()); ?>" class="hover:text-white transition-colors inline-flex items-center gap-2">
+                            <a href="mailto:<?php echo esc_attr(frameworkupsites_get_email()); ?>" class="hover:text-white transition-colors inline-flex items-center gap-2">
                                 <i class="fa-solid fa-envelope text-framework-primary"></i>
-                                <?php echo esc_html(gridtheme_get_email()); ?>
+                                <?php echo esc_html(frameworkupsites_get_email()); ?>
                             </a>
                         </li>
                         <?php endif; ?>
                         
-                        <?php if (gridtheme_get_whatsapp()) : ?>
+                        <?php if (frameworkupsites_get_whatsapp()) : ?>
                         <li>
-                            <a href="<?php echo esc_url(gridtheme_whatsapp_link()); ?>" target="_blank" rel="noopener" class="hover:text-white transition-colors inline-flex items-center gap-2">
+                            <a href="<?php echo esc_url(frameworkupsites_whatsapp_link()); ?>" target="_blank" rel="noopener" class="hover:text-white transition-colors inline-flex items-center gap-2">
                                 <i class="fa-brands fa-whatsapp text-framework-primary"></i>
                                 WhatsApp
                             </a>

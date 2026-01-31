@@ -224,42 +224,42 @@ if (class_exists('WooCommerce')) {
     /**
      * Adiciona wrapper customizado do WooCommerce
      */
-    function gridtheme_woocommerce_wrapper_start() {
+    function frameworkupsites_woocommerce_wrapper_start() {
         echo '<div class="container mx-auto px-4 py-8">';
     }
-    add_action('woocommerce_before_main_content', 'gridtheme_woocommerce_wrapper_start', 10);
+    add_action('woocommerce_before_main_content', 'frameworkupsites_woocommerce_wrapper_start', 10);
     
-    function gridtheme_woocommerce_wrapper_end() {
+    function frameworkupsites_woocommerce_wrapper_end() {
         echo '</div>';
     }
-    add_action('woocommerce_after_main_content', 'gridtheme_woocommerce_wrapper_end', 10);
+    add_action('woocommerce_after_main_content', 'frameworkupsites_woocommerce_wrapper_end', 10);
     
     /**
      * Define número de produtos por página
      */
-    function gridtheme_products_per_page() {
+    function frameworkupsites_products_per_page() {
         return 12;
     }
-    add_filter('loop_shop_per_page', 'gridtheme_products_per_page', 20);
+    add_filter('loop_shop_per_page', 'frameworkupsites_products_per_page', 20);
 }
 
 /**
  * Define número de posts por página no blog
  */
-function gridtheme_posts_per_page($query) {
+function frameworkupsites_posts_per_page($query) {
     if (!is_admin() && $query->is_main_query() && (is_home() || is_archive())) {
         $query->set('posts_per_page', 12);
     }
 }
-add_action('pre_get_posts', 'gridtheme_posts_per_page');
+add_action('pre_get_posts', 'frameworkupsites_posts_per_page');
 
 /**
  * Altera o separador do título da página
  */
-function gridtheme_document_title_separator($sep) {
+function frameworkupsites_document_title_separator($sep) {
     return '|';
 }
-add_filter('document_title_separator', 'gridtheme_document_title_separator');
+add_filter('document_title_separator', 'frameworkupsites_document_title_separator');
 
 /**
  * Limpa o head do WordPress de códigos desnecessários
@@ -273,7 +273,7 @@ remove_action('wp_head', 'rsd_link');
 /**
  * Função helper para obter URL de imagem otimizada
  */
-function gridtheme_get_image_url($image_id, $size = 'full') {
+function frameworkupsites_get_image_url($image_id, $size = 'full') {
     if (!$image_id) {
         return '';
     }
@@ -285,8 +285,8 @@ function gridtheme_get_image_url($image_id, $size = 'full') {
 /**
  * Adiciona Google Analytics
  */
-function gridtheme_add_google_analytics() {
-    $ga_id = get_option('gridtheme_google_analytics');
+function frameworkupsites_add_google_analytics() {
+    $ga_id = get_option('frameworkupsites_google_analytics');
     
     if (!empty($ga_id) && !is_admin() && !current_user_can('manage_options')) {
         ?>
@@ -301,13 +301,13 @@ function gridtheme_add_google_analytics() {
         <?php
     }
 }
-add_action('wp_head', 'gridtheme_add_google_analytics');
+add_action('wp_head', 'frameworkupsites_add_google_analytics');
 
 /**
  * Adiciona Facebook Pixel
  */
-function gridtheme_add_facebook_pixel() {
-    $pixel_id = get_option('gridtheme_facebook_pixel');
+function frameworkupsites_add_facebook_pixel() {
+    $pixel_id = get_option('frameworkupsites_facebook_pixel');
     
     if (!empty($pixel_id) && !is_admin() && !current_user_can('manage_options')) {
         ?>
@@ -331,37 +331,37 @@ function gridtheme_add_facebook_pixel() {
         <?php
     }
 }
-add_action('wp_head', 'gridtheme_add_facebook_pixel');
+add_action('wp_head', 'frameworkupsites_add_facebook_pixel');
 
 /**
  * Adiciona scripts customizados no header
  */
-function gridtheme_add_header_scripts() {
-    $scripts = get_option('gridtheme_header_scripts');
+function frameworkupsites_add_header_scripts() {
+    $scripts = get_option('frameworkupsites_header_scripts');
     
     if (!empty($scripts) && !is_admin()) {
         echo $scripts;
     }
 }
-add_action('wp_head', 'gridtheme_add_header_scripts', 100);
+add_action('wp_head', 'frameworkupsites_add_header_scripts', 100);
 
 /**
  * Adiciona scripts customizados no footer
  */
-function gridtheme_add_footer_scripts() {
-    $scripts = get_option('gridtheme_footer_scripts');
+function frameworkupsites_add_footer_scripts() {
+    $scripts = get_option('frameworkupsites_footer_scripts');
     
     if (!empty($scripts) && !is_admin()) {
         echo $scripts;
     }
 }
-add_action('wp_footer', 'gridtheme_add_footer_scripts', 100);
+add_action('wp_footer', 'frameworkupsites_add_footer_scripts', 100);
 
 /**
  * Modifica links de menu com âncoras (#) para funcionar corretamente
  * Se o link começa com #, adiciona a URL da home antes da âncora quando não estiver na home
  */
-function gridtheme_menu_anchor_links($atts, $item, $args) {
+function frameworkupsites_menu_anchor_links($atts, $item, $args) {
     // Verifica se o link começa com #
     if (isset($atts['href']) && strpos($atts['href'], '#') === 0) {
         // Se não estiver na home, adiciona a URL da home antes da âncora
@@ -371,4 +371,4 @@ function gridtheme_menu_anchor_links($atts, $item, $args) {
     }
     return $atts;
 }
-add_filter('nav_menu_link_attributes', 'gridtheme_menu_anchor_links', 10, 3);
+add_filter('nav_menu_link_attributes', 'frameworkupsites_menu_anchor_links', 10, 3);

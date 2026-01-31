@@ -215,7 +215,7 @@ remove_action('wp_head', 'feed_links_extra', 3);
  * Adiciona atributos async/defer nos scripts
  */
 function frameworkupsites_async_scripts($tag, $handle) {
-    $async_scripts = array('gridtheme-main'); // Adicione handles aqui
+    $async_scripts = array('frameworkupsites-main'); // Adicione handles aqui
     
     if (in_array($handle, $async_scripts)) {
         return str_replace(' src', ' async src', $tag);
