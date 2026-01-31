@@ -2,7 +2,7 @@
 
 Tema WordPress moderno e flexível com Tailwind CSS, desenvolvido para ser reutilizável em qualquer projeto.
 
-## 🎨 Características
+## Características
 
 - **Framework CSS**: Tailwind CSS 3.4
 - **Fonte**: Readex Pro (Google Fonts)
@@ -14,14 +14,14 @@ Tema WordPress moderno e flexível com Tailwind CSS, desenvolvido para ser reuti
 - **Sistema de Templates**: Automático via pasta `/pages/`
 - **Otimizações**: Performance e SEO
 
-## 📦 Instalação
+## Instalação
 
 1. Faça upload do tema para `/wp-content/themes/frameworkupsites/`
 2. Ative o tema no WordPress
 3. Instale e ative o plugin **Advanced Custom Fields (ACF)** (recomendado)
 4. Configure as opções do tema em **Opções FrameworkUpsites** no admin
 
-## ⚙️ Configuração Inicial
+## Configuração Inicial
 
 ### 1. Opções do Tema
 Acesse **Opções FrameworkUpsites** no admin do WordPress e configure:
@@ -62,9 +62,9 @@ Edite o arquivo `tailwind.config.js` para personalizar as cores:
 
 ```javascript
 colors: {
-  'grid-primary': '#4b58ff',  // Cor principal
-  'grid-white': '#f1eded',    // Cor de fundo clara
-  'grid-black': '#1e1c1c',    // Cor escura
+  'tema-primary': '#4b58ff',  // Cor principal
+  'tema-white': '#fff',    // Cor de fundo clara
+  'tema-black': '#000',    // Cor escura
 }
 ```
 
@@ -72,74 +72,6 @@ Após alterar, execute:
 ```bash
 npm run build
 ```
-
-## 📄 Templates Disponíveis
-
-### Home Page (pages/home.php)
-Template personalizável via ACF:
-
-**Campos ACF necessários:**
-- `hero_title` - Título do banner
-- `hero_subtitle` - Subtítulo destacado
-- `hero_description` - Descrição
-- `hero_button_text` - Texto do botão
-- `hero_button_link` - Link do botão
-- `hero_image` - Imagem do banner
-- `galeria_logos` - Galeria de logos (carrossel infinito)
-- `sobre_ativo` - Ativar seção sobre (true/false)
-- `sobre_titulo` - Título da seção sobre
-- `sobre_subtitulo` - Subtítulo
-- `sobre_descricao` - Descrição
-- `sobre_imagem` - Imagem
-- `sobre_itens` - Repeater com campo `texto`
-- `sobre_botao_texto` - Texto do botão
-- `sobre_botao_link` - Link do botão
-- `secoes_flexiveis` - Flexible Content (Layout: secao_texto, secao_cta)
-- `mostrar_projetos` - Mostrar projetos (true/false)
-- `projetos_titulo` - Título da seção
-- `projetos_subtitulo` - Subtítulo
-- `projetos_quantidade` - Quantidade a exibir
-- `projetos_botao_texto` - Texto do botão
-- `projetos_botao_link` - Link para ver todos
-- `mostrar_blog` - Mostrar blog (true/false)
-- `blog_titulo` - Título da seção
-- `blog_subtitulo` - Subtítulo
-- `blog_quantidade` - Quantidade a exibir
-- `blog_botao_texto` - Texto do botão
-- `blog_botao_link` - Link para ver todos
-
-### Blog (pages/blog.php)
-Página de listagem de posts com:
-- Sidebar de categorias
-- Grid de 3 colunas
-- Paginação
-- Filtro por categoria via query string
-
-### Contato (pages/contato.php)
-Página de contato com:
-- Informações dinâmicas das Opções do Tema
-- Formulário de contato
-- Links para redes sociais
-- CTA personalizável
-
-### Nossos Projetos (pages/nossos-projetos.php)
-Grid de projetos com:
-- Sistema de "Carregar mais" via AJAX
-- Integração com Custom Post Type "projetos"
-
-## 🎯 Custom Post Types
-
-### Projetos
-Já incluído e registrado. Campos ACF sugeridos:
-- `link_do_projeto` - URL do projeto online
-- `tag` - Tag/categoria do projeto
-- Imagem destacada (thumbnail)
-
-Para adicionar projetos:
-1. Vá em **Projetos > Adicionar Novo**
-2. Preencha título e descrição
-3. Adicione imagem destacada
-4. Configure campos personalizados (ACF)
 
 ## 🛠️ Desenvolvimento
 
@@ -271,7 +203,7 @@ Otimizações incluídas:
 - Remoção de scripts desnecessários
 - Cache de queries
 
-## 🆘 Suporte
+## Suporte
 
 Para dúvidas ou problemas:
 1. Verifique se o ACF está instalado e ativo
@@ -279,7 +211,7 @@ Para dúvidas ou problemas:
 3. Limpe o cache após alterações
 4. Recompile o Tailwind CSS após mudanças de estilo
 
-## 📝 Changelog
+## Changelog
 
 ### Versão 1.0.0
 - Lançamento inicial
@@ -290,14 +222,11 @@ Para dúvidas ou problemas:
 - Menu responsivo com submenu
 - Otimizações de performance e SEO
 
-## 📄 Licença
+## Licença
 
 GPL v2 or later
 
-## 👨‍💻 Créditos
+## Créditos
 
-Desenvolvido com ❤️ usando:
-- WordPress
-- Tailwind CSS
-- Font Awesome
-- Readex Pro Font
+Desenvolvido por: Pedro Hilário
+Github: https://github.com/Pedroohlr
