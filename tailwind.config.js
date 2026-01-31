@@ -12,9 +12,9 @@ module.exports = {
     extend: {
       colors: {
         // FrameworkUpsites Colors
-        'framework-primary': '#4b58ff',
-        'framework-white': '#f1eded',
-        'framework-black': '#1e1c1c',
+        'tema-primary': '#4b58ff',
+        'tema-white': '#fff',
+        'tema-black': '#000',
         
         primary: {
           50: '#eff6ff',
