@@ -208,7 +208,7 @@
     ],
     "workflow": "Editar src/input.css -> Tailwind compila -> assets/css/tailwind.css",
     "browser_sync": "Configurado para live reload (bs-config.js)",
-    "versionamento": "Atualizar FRAMEWORKTEMA_VERSION em functions.php"
+    "versionamento": "Atualizar FRAMEWORKUPSITES_VERSION em functions.php"
   },
   
   "integracao_figma": {

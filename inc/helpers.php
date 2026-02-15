@@ -59,6 +59,14 @@ function frameworkupsites_whatsapp_link($number = '', $message = '')
 }
 
 /**
+ * Obtém URL de imagem (alias para get_optimized_image)
+ */
+function frameworkupsites_get_image_url($image_id, $size = 'full')
+{
+  return frameworkupsites_get_optimized_image($image_id, $size);
+}
+
+/**
  * Obtém URL de imagem otimizada
  */
 function frameworkupsites_get_optimized_image($image_id, $size = 'full')

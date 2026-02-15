@@ -163,7 +163,7 @@
     "performance": {
       "scripts": "Carregar no footer quando possível",
       "css": "Minificar em produção",
-      "cache": "Usar versão nos assets (FRAMEWORKTEMA_VERSION)",
+      "cache": "Usar versão nos assets (FRAMEWORKUPSITES_VERSION)",
       "preconnect": "Usar para recursos externos (fonts, CDNs)"
     }
   },
