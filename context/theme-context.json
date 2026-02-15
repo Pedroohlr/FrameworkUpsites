@@ -122,7 +122,7 @@
   
   "javascript": {
     "arquivo_principal": "/assets/js/main.js",
-    "dependencias": "jQuery",
+    "dependencias": "jQuery, Embla Carousel (CDN)",
     "funcionalidades": {
       "initMobileMenu": "Menu mobile responsivo com animação",
       "initSmoothScroll": "Scroll suave para âncoras",
@@ -130,9 +130,17 @@
       "initLazyLoad": "Lazy loading de imagens",
       "initBackToTop": "Botão voltar ao topo",
       "initRotatingIcon": "Ícone rotativo no scroll",
-      "initFixedBanner": "Banner fixo com botão de fechar"
+      "initFixedBanner": "Banner fixo com botão de fechar",
+      "initEmblaCarousels": "Inicializa carrosséis Embla (classe .embla)"
     },
-    "inicializacao": "DOMContentLoaded event"
+    "inicializacao": "DOMContentLoaded event",
+    "embla_carousel": {
+      "estrutura_html": "<div class=\"embla\" data-embla-options='{\"loop\":true}'> <div class=\"embla__container\"> <div class=\"embla__slide\">...</div> </div> </div>",
+      "classe_viewport": "embla",
+      "classe_container": "embla__container",
+      "classe_slide": "embla__slide",
+      "opcoes_data": "data-embla-options (JSON: loop, align, dragFree)"
+    }
   },
   
   "otimizacoes_performance": {

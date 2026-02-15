@@ -44,10 +44,19 @@ function frameworkupsites_enqueue_scripts()
     FRAMEWORKUPSITES_VERSION
   );
 
+  // Embla Carousel (CDN - tema usa init em main.js)
+  wp_enqueue_script(
+    'embla-carousel',
+    'https://unpkg.com/embla-carousel@8/embla-carousel.umd.js',
+    array(),
+    '8.0.0',
+    true
+  );
+
   wp_enqueue_script(
     'frameworkupsites-main',
     FRAMEWORKUPSITES_URI . '/assets/js/main.js',
-    array('jquery'),
+    array('jquery', 'embla-carousel'),
     FRAMEWORKUPSITES_VERSION,
     true
   );

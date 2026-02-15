@@ -396,6 +396,24 @@
     });
   }
 
+  /**
+   * Inicializa carrosséis Embla
+   * Estrutura HTML: <div class="embla" data-embla>(viewport) <div class="embla__container"> <div class="embla__slide">...</div> ... </div> </div>
+   * Opções via data-embla-options (JSON): {"loop":true,"align":"start","dragFree":false}
+   */
+  function initEmblaCarousels() {
+    if (typeof EmblaCarousel === "undefined") return;
+
+    document.querySelectorAll(".embla").forEach((viewport) => {
+      let options = { loop: false, align: "start" };
+      try {
+        const opts = viewport.getAttribute("data-embla-options");
+        if (opts) options = Object.assign(options, JSON.parse(opts));
+      } catch (e) {}
+      EmblaCarousel(viewport, options);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initMobileMenu();
     initSmoothScroll();
@@ -404,8 +422,9 @@
     initBackToTop();
     initRotatingIcon();
     initFixedBanner();
-    initCustomSubmenu(); // Inicializa controle de submenu desktop
-    initMobileSubmenu(); // Inicializa controle de submenu mobile
+    initCustomSubmenu();
+    initMobileSubmenu();
+    initEmblaCarousels();
 
     console.log("FrameworkUpsites initialized successfully!");
   });

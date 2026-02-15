@@ -213,3 +213,18 @@ form[class*="woocommerce"] {
   position: fixed !important;
   z-index: 9999 !important;
 }
+
+/* Embla Carousel - estrutura base (tema) */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: 0;
+}
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  padding-left: 0;
+}
