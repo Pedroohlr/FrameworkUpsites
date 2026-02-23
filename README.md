@@ -5,7 +5,6 @@ Tema WordPress moderno e flexível com Tailwind CSS, desenvolvido para ser reuti
 ## Características
 
 - **Framework CSS**: Tailwind CSS 3.4
-- **Fonte**: Readex Pro (Google Fonts)
 - **Cores Personalizáveis**: Sistema de cores via `tailwind.config.js`
 - **Menu Responsivo**: Com submenu customizado
 - **Header Fixo**: Com compactação no scroll (desktop)
